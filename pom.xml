@@ -35,11 +35,6 @@
 	<url>http://35.200.137.36:8081/repository/releases/</url>
 	</repository>
 	
-	<snapshotRepository>
-	<id>snapshots</id>
-	<name>Snapshots</name>
-	<url>http://35.200.137.36:8081/repository/snapshots/</url>
-	</snapshotRepository>
 	
 	</distributionManagement>
 </project>
