@@ -41,7 +41,7 @@
    <distributionManagement>
       <repository>
          <id>nexus-releases</id>
-         <url>http://cape-app.southeastasia.cloudapp.azure.com:8000/repository/LoginWebAppnew/</url>
+         <url>http://cape-integrated-services.southeastasia.cloudapp.azure.com:8081/repository/LoginWebAppnew/</url>
       </repository>
    </distributionManagement>
    <scm>
