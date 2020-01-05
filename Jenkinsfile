@@ -40,12 +40,14 @@ pipeline{
    
                    withEnv(["", ""]) {
                    ansiblePlaybook (
+                   colorized: true,
                    credentialsId: 'ssh-sarav',
                    installation: 'ansible',
                    inventory: '{$WORKSPACE}/inventory',
                    playbook: '{$WORKSPACE}/dockerdeploy.yml',
                    sudo: true,
-                  sudoUser: 'sarav')
+                   sudoUser: 'sarav' 
+                  )
                    }
                   }
            }
