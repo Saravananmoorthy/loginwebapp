@@ -17,6 +17,8 @@
      image: 192.168.56.102:5000/loginapp:latest
      name: loginapp
      state: started
+     published_ports:
+        - "8080:8080"
 
  - name: Check if container is running
    shell: docker ps
