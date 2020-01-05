@@ -35,5 +35,18 @@ pipeline{
         }
       }
     }
+           stage('Deploy Container using Ansible'){
+   
+           withEnv(["", ""]) {
+           ansiblePlaybook colorized: true,
+           credentialsId: 'ssh-sarav',
+           installation: 'ansible',
+           inventory: 'inventory',
+           playbook: 'dockerdeploy.yml',
+           sudo: true,
+           sudoUser: 'sarav'
+}
+           
+           }
 }
 }
