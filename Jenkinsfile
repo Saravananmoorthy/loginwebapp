@@ -41,7 +41,7 @@ pipeline{
                    withEnv(["", ""]) {
                    ansiblePlaybook (
                    colorized: true,
-                   credentialsId: 'ssh-sarav',
+                   credentialsId: 'dockerregistry',
                    installation: 'ansible',
                    inventory: '{$WORKSPACE}/inventory',
                    playbook: '{$WORKSPACE}/dockerdeploy.yml',
