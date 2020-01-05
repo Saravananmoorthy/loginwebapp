@@ -14,7 +14,7 @@
 
  - name: Running the container
    docker_container:
-     image: 192.168.56.102:5000/loginapp:latest
+     image: 192.168.56.102:5000/loginapp:${BUILD_NUMBER}
      name: loginapp
      state: started
      published_ports:
