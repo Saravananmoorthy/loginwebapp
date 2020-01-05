@@ -43,6 +43,7 @@ pipeline{
                    installation: 'ansible',
                    inventory: '${WORKSPACE}/inventory',
                    playbook: '${WORKSPACE}/dockerdeploy.yml',
+                   disableHostKeyChecking: true
                   )       
                   }
            }
