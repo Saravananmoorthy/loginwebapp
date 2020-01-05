@@ -1,0 +1,7 @@
+---
+ - hosts: all
+   remote_user: sarav
+   become: yes
+   become_method: sudo 
+   roles: 
+     - { role: dockerdeploy }

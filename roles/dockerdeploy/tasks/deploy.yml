@@ -1,0 +1,24 @@
+---
+ - name: Install pip
+   apt: name=python-pip state=present
+
+ - name: Stop a container
+   docker_container:
+     name: loginapp
+     state: stopped
+
+ - name: remove container
+   docker_container:
+     name: loginapp
+     state: absent
+
+ - name: Running the container
+   docker_container:
+     image: 192.168.56.102:5000/loginapp:latest
+     name: loginapp
+     state: started
+
+ - name: Check if container is running
+   shell: docker ps
+
+

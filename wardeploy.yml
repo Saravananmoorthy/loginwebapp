@@ -1,8 +1,0 @@
-- hosts: tomcatserver
-  user: root
-  #become_user: sudo
-  gather_facts: false
-  become: true
-  tasks:
-  - name: Deploy App      
-    copy: src="/var/lib/jenkins/workspace/loginwebapp/target/LoginWebApp.war" dest="/var/lib/tomcat8/webapps/LoginWebApp.war"
