@@ -38,13 +38,14 @@ pipeline{
            stage('Deploy Container using Ansible'){
    
            withEnv(["", ""]) {
-           ansiblePlaybook colorized: true,
+           ansiblePlaybook (
            credentialsId: 'ssh-sarav',
            installation: 'ansible',
-           inventory: 'inventory',
-           playbook: 'dockerdeploy.yml',
+           inventory: '{$WORKSPACE}/inventory',
+           playbook: '{$WORKSPACE}/dockerdeploy.yml',
            sudo: true,
            sudoUser: 'sarav'
+           )
 }
            
            }
