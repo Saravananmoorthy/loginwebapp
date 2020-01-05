@@ -41,8 +41,8 @@ pipeline{
                    colorized: true,
                    credentialsId: 'ssh-sarav',
                    installation: 'ansible',
-                   inventory: '{$WORKSPACE}/inventory',
-                   playbook: '{$WORKSPACE}/dockerdeploy.yml',
+                   inventory: '${WORKSPACE}/inventory',
+                   playbook: '${WORKSPACE}/dockerdeploy.yml',
                   )       
                   }
            }
