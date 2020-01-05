@@ -37,8 +37,6 @@ pipeline{
     }
            stage('Deploy Container using Ansible'){
                   steps{
-   
-                   withEnv(["", ""]) {
                    ansiblePlaybook (
                    colorized: true,
                    credentialsId: 'dockerregistry',
@@ -47,8 +45,7 @@ pipeline{
                    playbook: '{$WORKSPACE}/dockerdeploy.yml',
                    sudo: true,
                    sudoUser: 'sarav' 
-                  )
-                   }
+                  )       
                   }
            }
    }
