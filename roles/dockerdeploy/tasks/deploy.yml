@@ -11,6 +11,17 @@
    docker_container:
      name: loginapp
      state: absent
+     
+ - name: Remove image
+   docker_image:
+     state: absent
+     name: 192.168.56.102:5000/loginapp:latest
+     tag: latest
+     
+ - name: pull an image
+   docker_image:
+     name: 192.168.56.102:5000/loginapp:latest
+     source: pull
 
  - name: Running the container
    docker_container:
