@@ -4,7 +4,7 @@
    when: ansible_os_family == "Debian"
  
  - name: Install pip in CentOs
-   yum: name=python2-pip state=present
+   dnf: name=python2-pip state=present
    when: ansible_os_family == "RedHat"
 
  - name: Stop a container
