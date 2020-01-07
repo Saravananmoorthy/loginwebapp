@@ -45,7 +45,7 @@ pipeline{
                    playbook: '${WORKSPACE}/dockerdeploy.yml',
                    disableHostKeyChecking: true,
                    extraVars   : [
-                          BUILD_NUMBER: "${BUILD_NUMER}"
+                          BUILD_NUMBER: "${BUILD_NUMBER}"
                                 ]
                   )       
                   }
