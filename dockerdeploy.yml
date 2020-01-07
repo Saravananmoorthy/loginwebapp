@@ -1,5 +1,7 @@
 ---
  - hosts: all
+   vars: 
+     BUILD_NUMBER: {{BUILD_NUMBER}}
    remote_user: sarav
    become: yes
    become_method: sudo 
