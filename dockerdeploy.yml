@@ -6,4 +6,4 @@
    roles: 
      - role: dockerdeploy
        vars: 
-          BUILD_NUMBER: {{BUILD_NUMBER}}
+          BUILD_NUMBER: '{{BUILD_NUMBER}}'
