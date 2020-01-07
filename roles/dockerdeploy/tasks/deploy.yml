@@ -1,12 +1,8 @@
 ---
- - name: Install pip in Ubuntu
+ - name: Install pip
    apt: name=python-pip state=present
    when: ansible_os_family == "Debian"
  
- - name: Install pip in CentOs
-   dnf: name=python2-dnf state=present
-   when: ansible_os_family == "RedHat"
-
  - name: Stop a container
    docker_container:
      name: loginapp
