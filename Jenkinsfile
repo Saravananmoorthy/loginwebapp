@@ -43,7 +43,10 @@ pipeline{
                    installation: 'ansible',
                    inventory: '${WORKSPACE}/inventory',
                    playbook: '${WORKSPACE}/dockerdeploy.yml',
-                   disableHostKeyChecking: true
+                   disableHostKeyChecking: true,
+                   extraVars   : [
+                          BUILD_NUMBER: "${BUILD_NUMER}"
+                                ]
                   )       
                   }
            }
