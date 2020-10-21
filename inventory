@@ -1,6 +1,6 @@
 [webappservers]
 192.168.1.10 ansible_user=sarav
 192.168.1.11 ansible_user=sarav
-192.168.1.12 ansible_user=sarav
+192.168.1.5 ansible_user=sarav
 
 
