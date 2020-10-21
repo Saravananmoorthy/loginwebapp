@@ -12,13 +12,7 @@
    docker_container:
      name: loginapp
      state: absent
-     
- - name: Remove image
-   docker_image:
-     state: absent
-     name: 192.168.1.10:5000/loginapp:latest
-     tag: latest
-   
+
  - name: pull an image
    docker_image:
      name: 192.168.1.10:5000/loginapp:{{BUILD_NUMBER}}
