@@ -2,6 +2,11 @@
  - name: Install pip
    apt: name=python-pip state=present
    when: ansible_os_family == "Debian"
+   
+ - name: Stop a container
+   docker_container:
+     name: loginapp
+     state: stopped
 
  - name: remove container
    docker_container:
