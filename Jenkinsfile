@@ -1,6 +1,6 @@
 pipeline{
        environment {
-    registry = "192.168.56.102:5000"
+    registry = "192.168.1.10:5000"
     registryCredential = 'dockerregistry'
     dockerImage = ''
   }
@@ -27,9 +27,9 @@ pipeline{
       steps{
         script {
           withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerregistry', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
-          sh "sudo docker login --password=${PASSWORD} --username=${USERNAME} 192.168.56.102:5000"
-          sh "sudo docker tag loginapp:${BUILD_NUMBER} 192.168.56.102:5000/loginapp:${BUILD_NUMBER}"
-          sh "sudo docker push 192.168.56.102:5000/loginapp:${BUILD_NUMBER}"
+          sh "sudo docker login --password=${PASSWORD} --username=${USERNAME} 192.168.1.10:5000"
+          sh "sudo docker tag loginapp:${BUILD_NUMBER} 192.168.1.10:5000/loginapp:${BUILD_NUMBER}"
+          sh "sudo docker push 192.168.1.10:5000/loginapp:${BUILD_NUMBER}"
 
           }
         }
