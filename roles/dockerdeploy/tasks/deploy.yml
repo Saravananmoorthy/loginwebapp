@@ -10,12 +10,12 @@
 
  - name: pull an image
    docker_image:
-     name: 192.168.1.10:5000/loginapp:{{BUILD_NUMBER}}
+     name: 192.168.1.2:5000/loginapp:{{BUILD_NUMBER}}
      source: pull
 
  - name: Running the container
    docker_container:
-     image: 192.168.1.10:5000/loginapp:{{BUILD_NUMBER}}
+     image: 192.168.1.2:5000/loginapp:{{BUILD_NUMBER}}
      name: loginapp
      state: started
      published_ports:
